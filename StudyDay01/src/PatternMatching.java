@@ -20,20 +20,20 @@ public class PatternMatching {
 
 		List<Student> scoreresult = new ArrayList<>();
 		//리스트로 점수데이터 입력
-		scoreresult.add(new Student(11.1,42.1,97.0,"이"));
-		scoreresult.add(new Student(21.1,33.1,95.0,"이"));
-		scoreresult.add(new Student(36.1,66.1,70.0,"이"));
-		scoreresult.add(new Student(11.1,87.1,88.0,"이"));
-		scoreresult.add(new Student(51.1,99.1,94.0,"이"));
-		scoreresult.add(new Student(89.1,99.1,13.0,"문"));
-		scoreresult.add(new Student(85.1,98.1,13.0,"문"));
-		scoreresult.add(new Student(94.1,88.1,30.0,"문"));
-		scoreresult.add(new Student(92.1,87.1,13.0,"문"));
-		scoreresult.add(new Student(78.1,84.1,13.0,"문"));
+		scoreresult.add(new Student(11.1,42.1,97.0).setCode("문"));
+		scoreresult.add(new Student(21.1,33.1,95.0).setCode("문"));
+		scoreresult.add(new Student(36.1,66.1,70.0).setCode("문"));
+		scoreresult.add(new Student(11.1,87.1,88.0).setCode("문"));
+		scoreresult.add(new Student(51.1,99.1,94.0).setCode("문"));
+		scoreresult.add(new Student(89.1,99.1,13.0).setCode("이"));
+		scoreresult.add(new Student(85.1,98.1,13.0).setCode("이"));
+		scoreresult.add(new Student(94.1,88.1,30.0).setCode("이"));
+		scoreresult.add(new Student(92.1,87.1,13.0).setCode("이"));
+		scoreresult.add(new Student(78.1,84.1,13.0).setCode("이"));
 		//식
 
 		//내점수 입력
-		Student me = new Student(90.0, 83.2, 30.3,"X");
+		Student me = new Student(90.0, 83.2, 30.3);//나는 아직 전공이 없기 때문에 빌드패턴을 통해 입력하지 않음.
 
 		Collections.sort(scoreresult, (Student s1, Student s2)->{	
 			return (int)((me.getCalc(s1)-me.getCalc(s2))*100000);

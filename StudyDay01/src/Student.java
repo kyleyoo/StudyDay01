@@ -10,12 +10,12 @@ public class Student {
 	public String getCode(){
 		return code;
 	}
-	public Student(double kor, double eng, double math, String code){
+	public Student(double kor, double eng, double math){
 		
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
-		this.code = code;
+		//this.code = code;
 		
 	}
 	
@@ -34,6 +34,11 @@ public class Student {
 	public String toString() {
 		return "Student [kor=" + kor + ", eng=" + eng + ", math=" + math + ", code=" + code + "]";
 	}
-
+	//빌드패턴은 선택적인 데이터(Code)를 생성자로 입력받지 않고 
+	//선택적으로 객체를 생성하면서 데이터를 입력 할 수 있게 만들어주는 패턴입니다.
+	public Student setCode(String code){
+		this.code=code;
+		return this;
+	}
 	
 }
